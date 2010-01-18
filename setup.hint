@@ -1,0 +1,6 @@
+category: Interpreters KDE
+requires: libgcc1 libQtCore4 libQtGui4 libQtXml4 libstdc++6 tcl
+sdesc: "Tcl Qt4 scripting tool"
+ldesc: "Qt-Tcl combines the power of the Tool Command Language (tcl) and 
+the elegance of the Qt bases Gui approach. It is a scripting tool for Qt 
+or another toolkit for Tcl."

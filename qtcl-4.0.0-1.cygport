@@ -1,0 +1,20 @@
+inherit qt4-qmake
+
+DESCRIPTION="Tcl Qt4 bindings"
+HOMEPAGE="http://sourceforge.net/projects/qtcl/"
+SRC_URI="mirror://sourceforge/qtcl/${P}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygconf --with-tcl=/usr
+	cygqmake4
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	qt4_qmake_install
+	mv ${D}/usr/lib/*.dll ${D}/usr/bin/
+	rm -f ${D}/usr/lib/*.a
+}
